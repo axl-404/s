@@ -69,7 +69,7 @@ while key == 'true':
         print('\33[1;37m-----------------------------------------------\33[0;97m[•]\33[1;32m WELCOME TO OZI TOOL ')
         time.sleep(1)
         # Assuming clear() is a function to clear the screen
-        clear()
+        ()
         key = 'false'
 
 ###----------[ USER AGENT ]---------- ###
