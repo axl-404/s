@@ -147,9 +147,9 @@ def bot_share():
 				print("\n")
 				cetak(nel(f'{P2} AUTO SHARE STOP POSSIBILITY OF INVALID COOKIES',width=35,padding=0,style='red'));exit()
 	except requests.exceptions.ConnectionError:
-    print(f"\n{P}(!)  YOU ARE NOT CONNECTED TO THE INTERNET!!!");exit()
-    def shoha_menu():
-    B4="Ozi-"
+             print(f"\n{P}(!)  YOU ARE NOT CONNECTED TO THE INTERNET!!!");exit()
+             def shoha_menu():
+             B4="Ozi-"
     uuid = str(os.geteuid()) + str(os.getlogin()) 
     id = "5".join(uuid)
     print(logo)
