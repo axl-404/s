@@ -21,11 +21,7 @@ from rich import print as cetak
 ses=requests.Session()
 print(" \x1b[38;5;196m[\x1b[38;5;46m•\x1b[38;5;196m]\x1b[38;5;46m SYSTEM INSTALL.....\x1b[38;5;196m")
 
-os.system("pkg install espeak")
-
 print(" \x1b[38;5;196m[\x1b[38;5;46m•\x1b[38;5;196m]\x1b[38;5;46m SYSTEM INSTALL SUCCESSFUL")
-
-os.system('espeak -a 300 " install complete"')
 ###############❎ ##############
 bulan = {'1':'January','2':'February','3':'March','4':'April','5':'May','6':'June','7':'July','8':'August','9':'September','10': 'October', '11': 'November', '12': 'December'}
 tgl = datetime.now().day
@@ -96,19 +92,15 @@ def login():
 	
 	os.system("clear")
 	cookie = input(f"\x1b[38;5;196m LOGIN FRESH COOKIE  :>\x1b[38;5;46m ")
-	os.system('espeak -a 300 " Place LOGIN "')
 	try:
 		data = ses.get("https://business.facebook.com/business_locations", headers = {"user-agent": "Mozilla/5.0 (Linux; Android 8.1.0; MI 8 Build/OPM1.171019.011) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.86 Mobile Safari/537.36","referer": "https://www.facebook.com/","host": "business.facebook.com","origin": "https://business.facebook.com","upgrade-insecure-requests" : "1","accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7","cache-control": "max-age=0","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8","content-type":"text/html; charset=utf-8"}, cookies = {"cookie":cookie})
 		find_token = re.search("(EAAG\w+)", data.text)
 		open("token.txt", "w").write(find_token.group(1))
 		open("cookie.txt", "w").write(cookie)
 		cetak(nel(f'\x1b[38;5;46mLOGIN DONE '))
-		os.system('espeak -a 300 "Login successful"')
-		nsnbot_share()
 	except:
 		os.system("rm token.txt cookie.txt")
 		cetak(nel(f'\x1b[38;5;196m [!] LOGIN FAILED...TRY AGAIN !!!'))
-		os.system('espeak -a 300 " Login failed"')
 		login()
 		
 ###############❎ ##############
@@ -125,7 +117,6 @@ def nsnbot_share():
 	except:
 		os.system("rm token.txt cookie.txt")
 		cetak(nel(f'{P2} COOKIE INVALID!!',width=22,style=f"#00FF00"));time.sleep(1.5)
-		os.system('espeak -a 300 " cookie invalid"')
 		login()
 	os.system('clear')
 	logo_menu()
@@ -136,10 +127,8 @@ def nsnbot_share():
 	cetak(nel(f'{P2}Hello Dear {H2}{nama}{P2}, You copy the link of your post from Facebook lite.',title=f'{P2} {H2}[ {P2}NOTE {H2}]',subtitle_align='left',padding=1,style='blue'))
 	cetak(nel(f'{P2} Paste the link of your post',subtitle=f'{P2}┌─',subtitle_align='left',width=25,padding=0,style='blue'))
 	link = input(f"{P}   └──> : {H}")
-	os.system('espeak -a 300 " Paste the link of your post"')
 	cetak(nel(f'{P2} Your limit',subtitle=f'{P2}┌─',subtitle_align='left',width=22,padding=0,style='blue'))
 	jumlah = int(input(f"{P}   └──> : {H}"))
-	os.system('espeak -a 300 " auto share limit"')
 	cetak(nel(f'{P2} Your share is being sent Please wait',subtitle=f'{P2}┌─',subtitle_align='left',width=29,padding=0,style='blue'))
 	basariganteng = datetime.now()
 	try:
@@ -152,13 +141,11 @@ def nsnbot_share():
 			if "id" in post:
 				bas = str(datetime.now()-basariganteng).split('.')[0]
 				print(f'{P}\r   └──> Time {bas} Share send {H}{n}{P}  {N} ',end='');sys.stdout.flush()
-				os.system('espeak -a 300 " place wite"')
 			else:
 				print("\n")
 				cetak(nel(f'{P2} YOUR COOKIE INVALID',width=35,padding=0,style='red'));exit()
 	except requests.exceptions.ConnectionError:
 		print(f"\n{P}(!) Check your internet connection!! !");exit()
-		os.system('espeak -a 300 " Check your internet connection And try agin"')
 nsnbot_share()
 
 
