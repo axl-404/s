@@ -148,6 +148,36 @@ def bot_share():
 				cetak(nel(f'{P2} AUTO SHARE STOP POSSIBILITY OF INVALID COOKIES',width=35,padding=0,style='red'));exit()
 	except requests.exceptions.ConnectionError:
 		print(f"\n{P}(!)  YOU ARE NOT CONNECTED TO THE INTERNET!!!");exit()
+		def shoha_menu():
+    B4="Ozi-"
+    uuid = str(os.geteuid()) + str(os.getlogin()) 
+    id = "5".join(uuid)
+    print(logo)
+    DARK=requests.get("https://github.com/taxs-404/approval/blob/main/approval.txt").text
+    if id in DARK:
+        DARK()
+    else:
+        os.system("clear")
+        os.system("xdg-open https://www.facebook.com/profile.php?id=61568829162256")
+        time.sleep(3.0)
+        
+        os.system("clear")
+        print(logo)
+        print("\t\033[30m   [\033[1;32m\033[47m FIRST GET APPROVAL\033[00m\033[1;30m]")
+        print ("")
+        print("┌━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━┐ \n\033[1;32m│ NOTE : THAT IS PAID BECAUSE 100% OK ID JUST NOW LOGIN│\033[1;37m\n└━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━━═━═━═━═━═━═━═━┘")
+        print ("")
+        print("                YOUR KEY IS NOT APPROVED ")
+        print("               COPY AND SEND KEY TO ADMIN")
+        print ("")
+        print (" YOUR KEY : "+B4+id)
+        print ("\n")
+        name = input(" YOUR NAME : ")
+        print ("")
+        input(" PRESS ENTER TO SEND KEY")
+        os.system("xdg-open https://www.facebook.com/profile.php?id=61568829162256")
+shoha_menu()
+
 bot_share()
 
 
