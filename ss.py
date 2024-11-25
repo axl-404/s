@@ -58,6 +58,20 @@ P2 = "[#FFFFFF]" # PUTIH
 J2 = "[#FF8F00]" # JINGGA
 A2 = "[#AAAAAA]" # ABU-ABU
 
+###----------[ LOGIN_KEY ]---------###
+correct_username = 'ozi'
+key = 'true'
+
+while key == 'true':
+    username = input('\33[0;97m[ozi]\33[1;96m~~~~~>\33[1;92mPLEASE ENTER KEY\33[1;91m: ')
+
+    if username == correct_username:
+        print('\33[1;37m-----------------------------------------------\33[0;97m[•]\33[1;32m WELCOME TO OZI TOOL ')
+        time.sleep(1)
+        # Assuming clear() is a function to clear the screen
+        clear()
+        key = 'false'
+
 ###----------[ USER AGENT ]---------- ###
 ua_default = 'Mozilla/5.0 (Linux; Android 3.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.66 Mobile Safari/537.36'
 ua_samsung = 'Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/43.0.2357.121 Mobile Safari/537.36 [FB_IAB/FB4A;FBAV/35.0.0.48.273;]'
